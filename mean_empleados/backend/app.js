@@ -10,7 +10,7 @@ app.set('nombreApp','Gestión de empleados');
 //middleware
 //app.use(cors({origin: 'http://localhost:4200'}));
 app.use(cors({
-  origin: 'http://localhost:4200',
+  origin: 'http://localhost:4199',
   credentials: true
 }));
 
