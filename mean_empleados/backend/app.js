@@ -8,7 +8,12 @@ app.set('puerto',process.env.PORT|| 3000);
 app.set('nombreApp','Gestión de empleados');
 
 //middleware
-app.use(cors({origin: 'http://localhost:4200'}));
+//app.use(cors({origin: 'http://localhost:4200'}));
+app.use(cors({
+  origin: 'http://localhost:4199',
+  credentials: true
+}));
+
 app.use(express.json());
 app.use(morgan('dev'));
 
