@@ -2,12 +2,17 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Empleado} from '../models/empleado'
 
+import { environment } from '../../environments/environment';
+
 @Injectable({
   providedIn: 'any'
 })
 
 export class EmpleadoService {
-  URL_API='http://localhost:3000/api/empleados'; 
+  
+  URL_API = `${environment.apiUrl}/empleados`;
+
+  //URL_API='http://localhost:3000/api/empleados'; 
     empleados : Empleado[] = []; 
     selectedEmpleado: Empleado={ 
       nombre        : '', 
